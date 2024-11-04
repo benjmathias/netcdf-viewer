@@ -158,7 +158,7 @@ class NetCDFStreamlitApp:
                 if x_dim_idx != y_dim_idx:
                     # Add slider for scatter plot resolution just before plotting
                     max_points = self.streamlit.slider(
-                        "Scatter Plot Resolution",
+                        "Resolution",
                         min_value=1_000,
                         max_value=49_000,
                         step=1_000,
