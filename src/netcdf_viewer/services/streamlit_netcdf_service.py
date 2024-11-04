@@ -38,9 +38,9 @@ class StreamlitNetCDFService:
     def run(self) -> None:
         """Run the Streamlit NetCDF viewer application."""
         self.streamlit.set_page_config(
-            page_title="NetCDF File Previewer", layout="wide"
+            page_title="NetCDF File Viewer", layout="wide"
         )
-        self.streamlit.title("NetCDF File Previewer")
+        self.streamlit.title("NetCDF File Viewer")
 
         uploaded_file: UploadedFile = self.streamlit.file_uploader(
             "Choose a NetCDF file", type=["nc"]

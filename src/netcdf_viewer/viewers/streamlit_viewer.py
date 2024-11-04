@@ -58,10 +58,10 @@ class NetCDFStreamlitApp:
     def run(self) -> None:
         """Run the Streamlit application."""
         self.streamlit.set_page_config(
-            page_title="NetCDF File Previewer", layout="wide"
+            page_title="NetCDF File Viewer", layout="wide"
         )
 
-        self.streamlit.title("NetCDF File Previewer")
+        self.streamlit.title("NetCDF File Viewer")
 
         uploaded_file: UploadedFile = self.streamlit.file_uploader(
             "Choose a NetCDF file", type=["nc"]
@@ -181,9 +181,6 @@ class NetCDFStreamlitApp:
                             )
                             self.streamlit.plotly_chart(fig, use_container_width=True)
 
-                            if num_nans > 0:
-                                self.streamlit.warning(f"Data contains {num_nans} NaN values which will not be plotted.")
-                        
                             # Add raw data preview after the plot
                             self._display_raw_data_preview(values_transposed, var_data["dimensions"], x_dim_idx, y_dim_idx)
             except Exception as e:
