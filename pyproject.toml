@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "netcdf-reader"
+version = "0.1.0"
+description = "A Streamlit application for viewing and analyzing NetCDF files."
+authors = ["Your Name <benjamin.mathias@acri-st.fr>"]
+license = "MIT"
+  packages = [
+      { include = "netcdf_viewer", from = "src" }
+  ]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+pydantic = ">=1.10,<2.0"
+netCDF4 = ">=1.5.7,<2.0"
+numpy = ">=1.24.0,<2.0"
+pandas = ">=2.0.0,<3.0"
+plotly = ">=5.15.0,<6.0"
+streamlit = ">=1.25.0,<2.0"
+watchdog = "^6.0.0,<7.0"
+
+[tool.poetry.dev-dependencies]
+mypy = ">=0.991,<1.0"
+ruff = ">=0.0.289,<1.0"
+pre-commit = ">=3.4.0,<4.0"
+pytest = ">=7.3.1,<8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

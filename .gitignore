@@ -1,0 +1,6 @@
+*.pyc
+tests/logs/**
+tests/e2e/report/**
+.vscode/**
+**/__pycache__
+.idea

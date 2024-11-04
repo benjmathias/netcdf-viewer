@@ -1,0 +1,11 @@
+tests/**
+docs/**
+Dockerfile
+.gitlab-ci.yml
+.gitignore
+.git/*
+.dockerignore
+docker-compose.yaml
+README.md
+venv/**
+build/**
